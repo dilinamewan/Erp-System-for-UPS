@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erp System for UPS", "Erp System for UPS\Erp System for UPS.csproj", "{A68C3EEC-F7FC-4948-AAF2-093DA8B492BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A68C3EEC-F7FC-4948-AAF2-093DA8B492BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68C3EEC-F7FC-4948-AAF2-093DA8B492BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68C3EEC-F7FC-4948-AAF2-093DA8B492BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68C3EEC-F7FC-4948-AAF2-093DA8B492BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE90D3AB-CBCB-46D1-9E02-B18BB0A27173}
+	EndGlobalSection
+EndGlobal
