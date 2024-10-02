@@ -16,5 +16,10 @@ namespace Erp_System_for_UPS
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
