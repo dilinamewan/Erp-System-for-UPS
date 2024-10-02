@@ -21,5 +21,10 @@ namespace Erp_System_for_UPS
         {
             
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
