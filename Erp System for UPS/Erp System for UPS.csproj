@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Loginform.cs">
-    <Compile Include="Dbcon.cs" />
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Loginform.Designer.cs">
