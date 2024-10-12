@@ -73,7 +73,7 @@ namespace Erp_System_for_UPS
 
         private void ManageDrivers_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new ManageUserForm());
         }
 
         private void LogOut_Click(object sender, EventArgs e)
@@ -84,6 +84,27 @@ namespace Erp_System_for_UPS
         private void VehicleMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        public void LoadForm(object form)
+        {
+            if (this.MainPanel.Controls.Count > 0)
+                this.MainPanel.Controls.RemoveAt(0);
+            Form fh = form as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.MainPanel.Controls.Add(fh);
+            this.MainPanel.Tag = fh;
+            fh.Show();
+        }
+
+        private void AllVehicles_Click(object sender, EventArgs e)
+        {
+            LoadForm(new AllVehicleForm());
         }
     }
 }
