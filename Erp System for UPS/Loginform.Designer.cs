@@ -140,7 +140,7 @@
             this.btnlogin.BackColor = System.Drawing.Color.Goldenrod;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(13, 383);
+            this.btnlogin.Location = new System.Drawing.Point(9, 384);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(280, 33);
             this.btnlogin.TabIndex = 5;
@@ -161,10 +161,10 @@
             // checkBoxpass
             // 
             this.checkBoxpass.AutoSize = true;
-            this.checkBoxpass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxpass.Location = new System.Drawing.Point(148, 441);
+            this.checkBoxpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxpass.Location = new System.Drawing.Point(158, 441);
             this.checkBoxpass.Name = "checkBoxpass";
-            this.checkBoxpass.Size = new System.Drawing.Size(145, 24);
+            this.checkBoxpass.Size = new System.Drawing.Size(184, 27);
             this.checkBoxpass.TabIndex = 7;
             this.checkBoxpass.Text = "Show Password";
             this.checkBoxpass.UseVisualStyleBackColor = true;
@@ -173,12 +173,12 @@
             // lblclear
             // 
             this.lblclear.AutoSize = true;
-            this.lblclear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblclear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblclear.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblclear.Location = new System.Drawing.Point(59, 445);
+            this.lblclear.Location = new System.Drawing.Point(13, 443);
             this.lblclear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblclear.Name = "lblclear";
-            this.lblclear.Size = new System.Drawing.Size(49, 18);
+            this.lblclear.Size = new System.Drawing.Size(63, 23);
             this.lblclear.TabIndex = 8;
             this.lblclear.Text = "Clear";
             this.lblclear.Click += new System.EventHandler(this.lblclear_Click);

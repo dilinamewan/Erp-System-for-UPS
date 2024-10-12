@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Erp_System_for_UPS
 {
     public partial class Form1 : Form
     {
+        private string connectionString = "Server=localhost;Database=ups;Uid=root;Pwd=;";
         public Form1()
         {
             InitializeComponent();
@@ -75,7 +77,55 @@ namespace Erp_System_for_UPS
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            // Add your code here
+            string username = textBoxname.Text;
+            string password = textBoxpass.Text;
+            if (AuthenticateUser(username, password))
+            {
+                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // You can redirect to the main dashboard here
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Method to authenticate the user by checking the SQL Server database
+        private bool AuthenticateUser(string username, string password)
+        {
+            try
+            {
+                using (var db = new DbConnection(connectionString))
+                {
+                    db.Open();
+                    string query = "SELECT COUNT(1) FROM users WHERE UserName = @UserName AND Password = @Password";
+
+                    // Define parameters
+                    SqlParameter[] parameters = {
+                        new SqlParameter("@UserName", username),
+                        new SqlParameter("@Password", password)
+                    };
+
+                    // Execute the query
+                    DataTable result = db.ExecuteQuery(query, parameters);
+
+                    // Check if any record was returned
+                    if (result.Rows.Count > 0 && Convert.ToInt32(result.Rows[0][0]) == 1)
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return false;
         }
     }
 }
+            
+
+        
+    
+
