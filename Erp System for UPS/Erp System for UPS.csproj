@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashbord.Designer.cs">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dbcon.cs" />
     <Compile Include="Loginform.cs">
       <SubType>Form</SubType>
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashbord.resx">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
