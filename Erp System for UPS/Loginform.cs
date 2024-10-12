@@ -19,7 +19,7 @@ namespace Erp_System_for_UPS
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -39,7 +39,7 @@ namespace Erp_System_for_UPS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -47,7 +47,7 @@ namespace Erp_System_for_UPS
 
         private void checkBoxpass_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBoxpass.Checked==true)
+            if (checkBoxpass.Checked == true)
             {
                 textBoxpass.UseSystemPasswordChar = false;
             }
@@ -70,7 +70,12 @@ namespace Erp_System_for_UPS
 
         private void textBoxname_TextChanged(object sender, EventArgs e)
         {
+            // Add your code here
+        }
 
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            // Add your code here
         }
     }
 }
