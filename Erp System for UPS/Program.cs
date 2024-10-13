@@ -16,7 +16,7 @@ namespace Erp_System_for_UPS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Dashbord());
         }
     }
 }

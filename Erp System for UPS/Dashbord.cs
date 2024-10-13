@@ -12,9 +12,99 @@ namespace Erp_System_for_UPS
 {
     public partial class Dashbord : Form
     {
+
         public Dashbord()
         {
             InitializeComponent();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Alert_Click(object sender, EventArgs e)
+        {
+            LoadForm(new MaintenanceAlertForm());
+        }
+        bool MenueExpand = false;
+        private void MenuTransision_Tick(object sender, EventArgs e)
+        {
+            if (MenueExpand == true)
+            {
+                VehicleMenu.Height += 10;
+                if (VehicleMenu.Height >= 210)
+                {
+                    MenuTransision.Stop();
+                    MenueExpand = false;
+                }
+            }
+            else
+            {
+                VehicleMenu.Height -= 10;
+                if (VehicleMenu.Height <= 60)
+                {
+                    MenuTransision.Stop();
+                    MenueExpand = true;
+                }
+            }
+
+
+        }
+        private void ManageVehicles_Click(object sender, EventArgs e)
+        {
+            MenuTransision.Start();
+        }
+
+        private void ManageDrivers_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ManageUserForm());
+        }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VehicleMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        public void LoadForm(object form)
+        {
+            if (this.MainPanel.Controls.Count > 0)
+                this.MainPanel.Controls.RemoveAt(0);
+            Form fh = form as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.MainPanel.Controls.Add(fh);
+            this.MainPanel.Tag = fh;
+            fh.Show();
+        }
+
+        private void AllVehicles_Click(object sender, EventArgs e)
+        {
+            LoadForm(new AllVehicleForm());
         }
     }
 }

@@ -1,68 +1,86 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
-public class DbConnection : IDisposable
+public class Dbcon
 {
-    private readonly string connectionString;
-    private SqlConnection connection;
+    private MySqlConnection conn;
 
-    public DbConnection(string connectionString)
+    public Dbcon()
     {
-        this.connectionString = connectionString;
-        connection = new SqlConnection(connectionString);
+        conn = null;
     }
 
-    public void Open()
+    // Connect to the database
+    public async Task Connect()
     {
-        if (connection.State == ConnectionState.Closed)
+        string connectionString = "Server=localhost;Port=3306;Database=ups;Uid=root;Pwd=root;";
+        conn = new MySqlConnection(connectionString);
+        await conn.OpenAsync();
+    }
+
+    // Disconnect the database
+    public void Disconnect()
+    {
+        conn?.Close();
+    }
+
+    // Execute a SELECT query and return a data reader
+    public async Task<MySqlDataReader> ExecuteQuery(string query, Dictionary<string, object> parameters = null)
+    {
+        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+        // If parameters are provided, add them to the command
+        if (parameters != null)
         {
-            connection.Open();
+            foreach (var param in parameters)
+            {
+                cmd.Parameters.AddWithValue(param.Key, param.Value);
+            }
         }
+
+        DbDataReader reader = await cmd.ExecuteReaderAsync();
+        return (MySqlDataReader)reader;
     }
 
-    public void Close()
+    // Execute a non-query (INSERT, UPDATE, DELETE) and return the number of affected rows
+    public async Task<int> ExecuteNonQuery(string query, Dictionary<string, object> parameters = null)
     {
-        if (connection.State == ConnectionState.Open)
+        using (var command = new MySqlCommand(query, conn))
         {
-            connection.Close();
-        }
-    }
-
-    public int ExecuteNonQuery(string commandText, SqlParameter[] parameters = null)
-    {
-        using (var command = new SqlCommand(commandText, connection))
-        {
+            // If parameters are provided, add them to the command
             if (parameters != null)
             {
-                command.Parameters.AddRange(parameters);
+                foreach (var param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
             }
 
-            return command.ExecuteNonQuery();
+            return await command.ExecuteNonQueryAsync();
         }
     }
 
-    public DataTable ExecuteQuery(string commandText, SqlParameter[] parameters = null)
+    // Execute a scalar query and return a single value (useful for retrieving auto-generated IDs)
+    public async Task<object> ExecuteScalar(string query, Dictionary<string, object> parameters = null)
     {
-        using (var command = new SqlCommand(commandText, connection))
+        using (var command = new MySqlCommand(query, conn))
         {
+            // If parameters are provided, add them to the command
             if (parameters != null)
             {
-                command.Parameters.AddRange(parameters);
+                foreach (var param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
             }
 
-            using (var adapter = new SqlDataAdapter(command))
-            {
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
+            return await command.ExecuteScalarAsync();
         }
-    }
-
-    public void Dispose()
-    {
-        Close();
-        connection.Dispose();
     }
 }
+
