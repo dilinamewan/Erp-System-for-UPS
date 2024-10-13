@@ -47,6 +47,7 @@ namespace Erp_System_for_UPS
         {
             if (MenueExpand == true)
             {
+                PackageTracking.Location = new Point(PackageTracking.Location.X, PackageTracking.Location.Y + 10);
                 VehicleMenu.Height += 10;
                 if (VehicleMenu.Height >= 210)
                 {
@@ -57,6 +58,7 @@ namespace Erp_System_for_UPS
             else
             {
                 VehicleMenu.Height -= 10;
+                PackageTracking.Location = new Point(PackageTracking.Location.X, PackageTracking.Location.Y - 10);
                 if (VehicleMenu.Height <= 60)
                 {
                     MenuTransision.Stop();
