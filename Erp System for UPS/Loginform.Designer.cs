@@ -41,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxpass = new System.Windows.Forms.CheckBox();
             this.lblclear = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -67,6 +69,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 16);
+            this.label3.Size = new System.Drawing.Size(242, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Operation Management System";
             // 
@@ -87,6 +90,7 @@
             this.textBoxname.Name = "textBoxname";
             this.textBoxname.Size = new System.Drawing.Size(280, 24);
             this.textBoxname.TabIndex = 1;
+            this.textBoxname.TextChanged += new System.EventHandler(this.textBoxname_TextChanged);
             // 
             // txtname
             // 
@@ -117,6 +121,7 @@
             this.textBoxpass.Size = new System.Drawing.Size(280, 24);
             this.textBoxpass.TabIndex = 3;
             this.textBoxpass.UseSystemPasswordChar = true;
+            this.textBoxpass.TextChanged += new System.EventHandler(this.textBoxpass_TextChanged);
             // 
             // btnlogin
             // 
@@ -150,6 +155,7 @@
             this.checkBoxpass.TabIndex = 7;
             this.checkBoxpass.Text = "Show Password";
             this.checkBoxpass.UseVisualStyleBackColor = true;
+            this.checkBoxpass.CheckedChanged += new System.EventHandler(this.checkBoxpass_CheckedChanged);
             // 
             // lblclear
             // 
@@ -162,6 +168,20 @@
             this.lblclear.Size = new System.Drawing.Size(39, 16);
             this.lblclear.TabIndex = 8;
             this.lblclear.Text = "Clear";
+            this.lblclear.Click += new System.EventHandler(this.lblclear_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Goldenrod;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(281, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(39, 31);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -179,6 +199,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -206,6 +227,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox checkBoxpass;
         private System.Windows.Forms.Label lblclear;
+        private System.Windows.Forms.Button button1;
     }
 }
 
