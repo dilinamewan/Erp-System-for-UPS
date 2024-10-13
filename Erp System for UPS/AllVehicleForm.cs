@@ -16,5 +16,10 @@ namespace Erp_System_for_UPS
         {
             InitializeComponent();
         }
+
+        private void AllVehicleForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

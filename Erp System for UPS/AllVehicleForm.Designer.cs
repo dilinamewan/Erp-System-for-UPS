@@ -63,6 +63,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AllVehicleForm";
             this.Text = "AllVehicleForm";
+            this.Load += new System.EventHandler(this.AllVehicleForm_Load);
             this.Header2.ResumeLayout(false);
             this.Header2.PerformLayout();
             this.ResumeLayout(false);
