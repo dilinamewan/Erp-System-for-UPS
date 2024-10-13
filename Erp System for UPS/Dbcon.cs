@@ -18,7 +18,7 @@ public class Dbcon
     // Connect to the database
     public async Task Connect()
     {
-        string connectionString = "Server=localhost;Port=3306;Database=ups;Uid=root;Pwd=root;";
+        string connectionString = "Server=localhost;Port=3306;Database=ups;Uid=root;Pwd=;";
         conn = new MySqlConnection(connectionString);
         await conn.OpenAsync();
     }
@@ -83,6 +83,7 @@ public class Dbcon
         }
     }
 
+
     // Method to add a new package to the Packagestracker table
     public async Task<int> AddPackage(string currentLocation, string status, string destination, double weight, string sender, string recipient, DateTime creationDate, DateTime estimatedDeliveryDate)
     {
@@ -110,4 +111,3 @@ public class Dbcon
         return await ExecuteQuery(query);
     }
 }
-

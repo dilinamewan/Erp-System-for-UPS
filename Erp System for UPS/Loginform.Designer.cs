@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBoxname = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxpass = new System.Windows.Forms.CheckBox();
             this.lblclear = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +59,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 79);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Goldenrod;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(281, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(39, 31);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -128,12 +141,13 @@
             this.btnlogin.BackColor = System.Drawing.Color.Goldenrod;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(13, 383);
+            this.btnlogin.Location = new System.Drawing.Point(9, 384);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(280, 33);
             this.btnlogin.TabIndex = 5;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // pictureBox1
             // 
@@ -148,10 +162,11 @@
             // checkBoxpass
             // 
             this.checkBoxpass.AutoSize = true;
-            this.checkBoxpass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxpass.Location = new System.Drawing.Point(148, 441);
+            this.checkBoxpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxpass.Location = new System.Drawing.Point(158, 441);
             this.checkBoxpass.Name = "checkBoxpass";
             this.checkBoxpass.Size = new System.Drawing.Size(117, 21);
+            this.checkBoxpass.Size = new System.Drawing.Size(184, 27);
             this.checkBoxpass.TabIndex = 7;
             this.checkBoxpass.Text = "Show Password";
             this.checkBoxpass.UseVisualStyleBackColor = true;
@@ -160,28 +175,16 @@
             // lblclear
             // 
             this.lblclear.AutoSize = true;
-            this.lblclear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblclear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblclear.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblclear.Location = new System.Drawing.Point(59, 445);
+            this.lblclear.Location = new System.Drawing.Point(13, 443);
             this.lblclear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblclear.Name = "lblclear";
             this.lblclear.Size = new System.Drawing.Size(39, 16);
+            this.lblclear.Size = new System.Drawing.Size(63, 23);
             this.lblclear.TabIndex = 8;
             this.lblclear.Text = "Clear";
             this.lblclear.Click += new System.EventHandler(this.lblclear_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Goldenrod;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(281, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 31);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
