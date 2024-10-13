@@ -78,7 +78,19 @@ namespace Erp_System_for_UPS
 
         private void LogOut_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                // Show a message indicating successful logout
+                MessageBox.Show("Logged out successfully!", "Log Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                // Open the login form
+                Form1 loginForm = new Form1();
+                loginForm.Show();
+
+                // Close the current form (main dashboard or the form where logout is being triggered)
+                this.Close();
+            }
         }
 
         private void VehicleMenu_Paint(object sender, PaintEventArgs e)
