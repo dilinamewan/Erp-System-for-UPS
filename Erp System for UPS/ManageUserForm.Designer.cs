@@ -93,6 +93,7 @@
             this.dataGridViewDrivers.RowTemplate.ReadOnly = true;
             this.dataGridViewDrivers.Size = new System.Drawing.Size(942, 569);
             this.dataGridViewDrivers.TabIndex = 4;
+            this.dataGridViewDrivers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDrivers_CellContentClick);
             // 
             // ManageUserForm
             // 
