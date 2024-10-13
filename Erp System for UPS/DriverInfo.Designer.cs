@@ -54,6 +54,7 @@
             this.DriverName.Size = new System.Drawing.Size(84, 17);
             this.DriverName.TabIndex = 0;
             this.DriverName.Text = "Driver Name";
+            this.DriverName.Click += new System.EventHandler(this.DriverName_Click);
             // 
             // dataGridViewDriver
             // 
@@ -71,7 +72,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridViewDriver);
             this.Controls.Add(this.Header2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DriverInfo";
             this.Text = "DriverInfo";
             this.Load += new System.EventHandler(this.DriverInfo_Load);
