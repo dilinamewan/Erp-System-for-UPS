@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBoxname = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.Label();
             this.txtpass = new System.Windows.Forms.Label();
             this.textBoxpass = new System.Windows.Forms.TextBox();
             this.btnlogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.checkBoxpass = new System.Windows.Forms.CheckBox();
             this.lblclear = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,17 +53,39 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 79);
             this.panel1.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(61, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(191, 16);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Operation Management System";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // textBoxname
             // 
             this.textBoxname.Location = new System.Drawing.Point(13, 252);
-            this.textBoxname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxname.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxname.Name = "textBoxname";
-            this.textBoxname.Size = new System.Drawing.Size(280, 28);
+            this.textBoxname.Size = new System.Drawing.Size(280, 24);
             this.textBoxname.TabIndex = 1;
             // 
             // txtname
@@ -72,7 +94,7 @@
             this.txtname.Location = new System.Drawing.Point(9, 227);
             this.txtname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(106, 21);
+            this.txtname.Size = new System.Drawing.Size(86, 19);
             this.txtname.TabIndex = 2;
             this.txtname.Text = "User Name:";
             // 
@@ -82,7 +104,7 @@
             this.txtpass.Location = new System.Drawing.Point(9, 297);
             this.txtpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(93, 21);
+            this.txtpass.Size = new System.Drawing.Size(76, 19);
             this.txtpass.TabIndex = 4;
             this.txtpass.Text = "Password:";
             this.txtpass.Click += new System.EventHandler(this.label2_Click);
@@ -92,7 +114,7 @@
             this.textBoxpass.Location = new System.Drawing.Point(9, 322);
             this.textBoxpass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxpass.Name = "textBoxpass";
-            this.textBoxpass.Size = new System.Drawing.Size(280, 28);
+            this.textBoxpass.Size = new System.Drawing.Size(280, 24);
             this.textBoxpass.TabIndex = 3;
             this.textBoxpass.UseSystemPasswordChar = true;
             // 
@@ -118,35 +140,13 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(61, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Operation Management System";
-            // 
             // checkBoxpass
             // 
             this.checkBoxpass.AutoSize = true;
             this.checkBoxpass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxpass.Location = new System.Drawing.Point(148, 441);
             this.checkBoxpass.Name = "checkBoxpass";
-            this.checkBoxpass.Size = new System.Drawing.Size(145, 24);
+            this.checkBoxpass.Size = new System.Drawing.Size(117, 21);
             this.checkBoxpass.TabIndex = 7;
             this.checkBoxpass.Text = "Show Password";
             this.checkBoxpass.UseVisualStyleBackColor = true;
@@ -159,13 +159,13 @@
             this.lblclear.Location = new System.Drawing.Point(59, 445);
             this.lblclear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblclear.Name = "lblclear";
-            this.lblclear.Size = new System.Drawing.Size(49, 18);
+            this.lblclear.Size = new System.Drawing.Size(39, 16);
             this.lblclear.TabIndex = 8;
             this.lblclear.Text = "Clear";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 550);
             this.Controls.Add(this.lblclear);
@@ -178,15 +178,16 @@
             this.Controls.Add(this.textBoxname);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

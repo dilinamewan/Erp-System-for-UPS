@@ -36,5 +36,12 @@ namespace Erp_System_for_UPS
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+   
     }
 }
