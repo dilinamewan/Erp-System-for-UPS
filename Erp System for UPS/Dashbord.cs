@@ -118,5 +118,11 @@ namespace Erp_System_for_UPS
         {
             LoadForm(new AllVehicleForm());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TrackingForm trackingForm = new TrackingForm();
+            trackingForm.Show();
+        }
     }
 }
