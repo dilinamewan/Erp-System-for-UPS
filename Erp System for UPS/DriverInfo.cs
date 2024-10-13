@@ -100,7 +100,7 @@ namespace Erp_System_for_UPS
 
         private void DriverInfo_Load(object sender, EventArgs e)
         {
-            // If you need to do additional work when the form loads, place it here.
+            
         }
 
         private void DriverName_Click(object sender, EventArgs e)

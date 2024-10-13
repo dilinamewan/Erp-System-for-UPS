@@ -30,7 +30,9 @@
         {
             this.Header2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewVehicles = new System.Windows.Forms.DataGridView();
             this.Header2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVehicles)).BeginInit();
             this.SuspendLayout();
             // 
             // Header2
@@ -53,12 +55,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "All Vehicles";
             // 
+            // dataGridViewVehicles
+            // 
+            this.dataGridViewVehicles.AllowUserToAddRows = false;
+            this.dataGridViewVehicles.AllowUserToDeleteRows = false;
+            this.dataGridViewVehicles.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dataGridViewVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVehicles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewVehicles.Location = new System.Drawing.Point(0, 26);
+            this.dataGridViewVehicles.Name = "dataGridViewVehicles";
+            this.dataGridViewVehicles.ReadOnly = true;
+            this.dataGridViewVehicles.Size = new System.Drawing.Size(925, 602);
+            this.dataGridViewVehicles.TabIndex = 4;
+            // 
             // AllVehicleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(925, 628);
+            this.Controls.Add(this.dataGridViewVehicles);
             this.Controls.Add(this.Header2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AllVehicleForm";
@@ -66,6 +82,7 @@
             this.Load += new System.EventHandler(this.AllVehicleForm_Load);
             this.Header2.ResumeLayout(false);
             this.Header2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVehicles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,5 +91,6 @@
 
         private System.Windows.Forms.Panel Header2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewVehicles;
     }
 }

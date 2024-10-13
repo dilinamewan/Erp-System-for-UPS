@@ -25,7 +25,7 @@ namespace Erp_System_for_UPS
         private async void FormDrivers_Load(object sender, EventArgs e)
         {
             await LoadDriversData();
-            AddButtonColumn(); // Add the button column after data is loaded
+            AddButtonColumn();
         }
 
         private async Task LoadDriversData()
@@ -57,7 +57,6 @@ namespace Erp_System_for_UPS
                 db.Disconnect();
             }
         }
-
         public void AddButtonColumn()
         {
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
@@ -80,12 +79,9 @@ namespace Erp_System_for_UPS
                     string driverName = Convert.ToString(cell1.Value);
                     DriverInfo driverInfoForm = new DriverInfo(driverId, driverName);
                     driverInfoForm.Show();
-                    this.Hide();
                 }
             
         }
-        
-
         private void ManageUserForm_Load(object sender, EventArgs e)
         {
         }

@@ -126,6 +126,12 @@
     <Compile Include="Loginform.Designer.cs">
       <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaintenanceAlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceAlertForm.Designer.cs">
+      <DependentUpon>MaintenanceAlertForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleInfo.Designer.cs">
+      <DependentUpon>VehicleInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AllVehicleForm.resx">
       <DependentUpon>AllVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceAlertForm.resx">
+      <DependentUpon>MaintenanceAlertForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageUserForm.resx">
       <DependentUpon>ManageUserForm.cs</DependentUpon>
@@ -158,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VehicleInfo.resx">
+      <DependentUpon>VehicleInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

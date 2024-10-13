@@ -40,7 +40,7 @@ namespace Erp_System_for_UPS
 
         private void Alert_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new MaintenanceAlertForm());
         }
         bool MenueExpand = false;
         private void MenuTransision_Tick(object sender, EventArgs e)
