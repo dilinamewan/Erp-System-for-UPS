@@ -101,16 +101,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllVehicleForm.cs" />
+    <Compile Include="AllVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AllVehicleForm.Designer.cs">
       <DependentUpon>AllVehicleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashbord.cs" />
+    <Compile Include="Dashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dashbord.Designer.cs">
       <DependentUpon>Dashbord.cs</DependentUpon>
     </Compile>
     <Compile Include="Dbcon.cs" />
-    <Compile Include="DriverInfo.cs" />
+    <Compile Include="DriverInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DriverInfo.Designer.cs">
       <DependentUpon>DriverInfo.cs</DependentUpon>
     </Compile>
@@ -120,17 +126,23 @@
     <Compile Include="Loginform.Designer.cs">
       <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaintenanceAlertForm.cs" />
+    <Compile Include="MaintenanceAlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MaintenanceAlertForm.Designer.cs">
       <DependentUpon>MaintenanceAlertForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageUserForm.cs" />
+    <Compile Include="ManageUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ManageUserForm.Designer.cs">
       <DependentUpon>ManageUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VehicleInfo.cs" />
+    <Compile Include="VehicleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VehicleInfo.Designer.cs">
       <DependentUpon>VehicleInfo.cs</DependentUpon>
     </Compile>

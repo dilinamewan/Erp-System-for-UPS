@@ -37,11 +37,40 @@ namespace Erp_System_for_UPS
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void checkBoxpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxpass.Checked==true)
+            {
+                textBoxpass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBoxpass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void textBoxpass_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-   
+        private void lblclear_Click(object sender, EventArgs e)
+        {
+            textBoxname.Clear();
+            textBoxpass.Clear();
+        }
+
+        private void textBoxname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
