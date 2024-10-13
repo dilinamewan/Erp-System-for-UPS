@@ -74,7 +74,10 @@ namespace Erp_System_for_UPS
             if (await AuthenticateUser(username, password))
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // You can redirect to the main dashboard here
+                // Redirect to Dashboard
+                Dashbord dashboard = new Dashbord();
+                dashboard.Show();
+                this.Hide();
             }
             else
             {
