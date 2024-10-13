@@ -51,6 +51,7 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="Microsoft.SqlServer.ConnectionDlg.AadAuthenticationProvider, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.ConnectionDlg.Core, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.ConnectionDlg.UI, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -58,6 +59,8 @@
     <Reference Include="Microsoft.SqlServer.ConnectionDlg.VS.Azure, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Data.Tools.ExceptionMessageBox, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Tools.Extensibility, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+=======
+>>>>>>> f0d2617fbb006714fab7a310dfa67102eb175c80
     <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
@@ -108,6 +111,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllVehicleForm.Designer.cs">
+      <DependentUpon>AllVehicleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashbord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,19 +124,55 @@
       <DependentUpon>Dashbord.cs</DependentUpon>
     </Compile>
     <Compile Include="Dbcon.cs" />
+    <Compile Include="DriverInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverInfo.Designer.cs">
+      <DependentUpon>DriverInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loginform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Loginform.Designer.cs">
       <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaintenanceAlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceAlertForm.Designer.cs">
+      <DependentUpon>MaintenanceAlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUserForm.Designer.cs">
+      <DependentUpon>ManageUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleInfo.Designer.cs">
+      <DependentUpon>VehicleInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllVehicleForm.resx">
+      <DependentUpon>AllVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashbord.resx">
       <DependentUpon>Dashbord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DriverInfo.resx">
+      <DependentUpon>DriverInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceAlertForm.resx">
+      <DependentUpon>MaintenanceAlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUserForm.resx">
+      <DependentUpon>ManageUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,6 +183,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VehicleInfo.resx">
+      <DependentUpon>VehicleInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
