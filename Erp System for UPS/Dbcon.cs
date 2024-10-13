@@ -1,117 +1,85 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
-public class DbConnection : IDisposable
-{
-    private readonly string connectionString;
-    private SqlConnection connection;
-
-    public DbConnection(string connectionString)
-    {
-        this.connectionString = connectionString;
-        connection = new SqlConnection(connectionString);
-    }
-
-    public void Open()
-    {
-        if (connection.State == ConnectionState.Closed)
-        {
-            connection.Open();
-        }
-    }
-
-    public void Close()
-    {
-        if (connection.State == ConnectionState.Open)
-        {
-            connection.Close();
-        }
-    }
-
-    public int ExecuteNonQuery(string commandText, SqlParameter[] parameters = null)
-    {
-        using (var command = new SqlCommand(commandText, connection))
-        {
-            if (parameters != null)
-            {
-                command.Parameters.AddRange(parameters);
-            }
-
-            return command.ExecuteNonQuery();
-        }
-    }
-
-    public DataTable ExecuteQuery(string commandText, SqlParameter[] parameters = null)
-    {
-        using (var command = new SqlCommand(commandText, connection))
-        {
-            if (parameters != null)
-            {
-                command.Parameters.AddRange(parameters);
-            }
-
-            using (var adapter = new SqlDataAdapter(command))
-            {
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
-        }
-    }
-
-    public void Dispose()
-    {
-        Close();
-        connection.Dispose();
-    }
-}
 public class Dbcon
 {
-    private SqlConnection connection;
+    private MySqlConnection conn;
 
-    public bool Connect()
+    public Dbcon()
     {
-        try
-        {
-            // Replace the connection string with your own
-            string connectionString = "YourConnectionString";
-            connection = new SqlConnection(connectionString);
-            connection.Open();
-            return true;
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Failed to connect to the database: " + ex.Message);
-            return false;
-        }
+        conn = null;
     }
 
-    public DataTable ExecuteQuery(string query)
+    // Connect to the database
+    public async Task Connect()
     {
-        DataTable dataTable = new DataTable();
-        try
-        {
-            SqlCommand command = new SqlCommand(query, connection);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            adapter.Fill(dataTable);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Failed to execute query: " + ex.Message);
-        }
-        return dataTable;
+        string connectionString = "Server=localhost;Port=3306;Database=ups;Uid=root;Pwd=;";
+        conn = new MySqlConnection(connectionString);
+        await conn.OpenAsync();
     }
 
+    // Disconnect the database
     public void Disconnect()
     {
-        try
+        conn?.Close();
+    }
+
+    // Execute a SELECT query and return a data reader
+    public async Task<MySqlDataReader> ExecuteQuery(string query, Dictionary<string, object> parameters = null)
+    {
+        MySqlCommand cmd = new MySqlCommand(query, conn);
+
+        // If parameters are provided, add them to the command
+        if (parameters != null)
         {
-            connection.Close();
+            foreach (var param in parameters)
+            {
+                cmd.Parameters.AddWithValue(param.Key, param.Value);
+            }
         }
-        catch (Exception ex)
+
+        DbDataReader reader = await cmd.ExecuteReaderAsync();
+        return (MySqlDataReader)reader;
+    }
+
+    // Execute a non-query (INSERT, UPDATE, DELETE) and return the number of affected rows
+    public async Task<int> ExecuteNonQuery(string query, Dictionary<string, object> parameters = null)
+    {
+        using (var command = new MySqlCommand(query, conn))
         {
-            Console.WriteLine("Failed to disconnect from the database: " + ex.Message);
+            // If parameters are provided, add them to the command
+            if (parameters != null)
+            {
+                foreach (var param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
+            }
+
+            return await command.ExecuteNonQueryAsync();
+        }
+    }
+
+    // Execute a scalar query and return a single value (useful for retrieving auto-generated IDs)
+    public async Task<object> ExecuteScalar(string query, Dictionary<string, object> parameters = null)
+    {
+        using (var command = new MySqlCommand(query, conn))
+        {
+            // If parameters are provided, add them to the command
+            if (parameters != null)
+            {
+                foreach (var param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
+            }
+
+            return await command.ExecuteScalarAsync();
         }
     }
 }

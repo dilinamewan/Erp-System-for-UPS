@@ -5,18 +5,24 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace Erp_System_for_UPS
 {
     public partial class Form1 : Form
     {
-        private string connectionString = "Server=localhost;Database=ups;Uid=root;Pwd=;";
+        private readonly Dbcon db;
+        
         public Form1()
+
         {
             InitializeComponent();
+            db = new Dbcon();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -75,11 +81,11 @@ namespace Erp_System_for_UPS
             // Add your code here
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        private async void btnlogin_Click(object sender, EventArgs e)
         {
             string username = textBoxname.Text;
             string password = textBoxpass.Text;
-            if (AuthenticateUser(username, password))
+            if (await AuthenticateUser(username, password))
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // You can redirect to the main dashboard here
@@ -91,39 +97,48 @@ namespace Erp_System_for_UPS
         }
 
         // Method to authenticate the user by checking the SQL Server database
-        private bool AuthenticateUser(string username, string password)
+        private async Task<bool> AuthenticateUser(string username, string password)
         {
             try
             {
-                using (var db = new DbConnection(connectionString))
+                await db.Connect();
+
+                string query = "SELECT COUNT(1) FROM users WHERE UserName = @UserName AND Password = @Password";
+
+                // Define parameters
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+        {
+            { "@UserName", username },
+            { "@Password", password }
+        };
+
+                // Execute the query using ExecuteScalar to get a single value (the count)
+                object result = await db.ExecuteScalar(query, parameters);
+
+                // Convert the result to an integer and check if it's equal to 1
+                if (result != null && Convert.ToInt32(result) == 1)
                 {
-                    db.Open();
-                    string query = "SELECT COUNT(1) FROM users WHERE UserName = @UserName AND Password = @Password";
-
-                    // Define parameters
-                    SqlParameter[] parameters = {
-                        new SqlParameter("@UserName", username),
-                        new SqlParameter("@Password", password)
-                    };
-
-                    // Execute the query
-                    DataTable result = db.ExecuteQuery(query, parameters);
-
-                    // Check if any record was returned
-                    if (result.Rows.Count > 0 && Convert.ToInt32(result.Rows[0][0]) == 1)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("MySQL Error: " + ex.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                db.Disconnect();
             }
             return false;
         }
+
     }
 }
+
             
 
         
