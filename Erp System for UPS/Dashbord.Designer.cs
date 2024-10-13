@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbord));
             this.Header = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.H1 = new System.Windows.Forms.Label();
             this.SideBar = new System.Windows.Forms.Panel();
             this.LogOutButton = new System.Windows.Forms.Button();
@@ -44,11 +45,11 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.MenuTransision = new System.Windows.Forms.Timer(this.components);
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PackageTracking = new System.Windows.Forms.Button();
             this.Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SideBar.SuspendLayout();
             this.VehicleMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -61,6 +62,16 @@
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(938, 44);
             this.Header.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(200, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // H1
             // 
@@ -79,6 +90,7 @@
             // SideBar
             // 
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.SideBar.Controls.Add(this.PackageTracking);
             this.SideBar.Controls.Add(this.LogOutButton);
             this.SideBar.Controls.Add(this.VehicleMenu);
             this.SideBar.Controls.Add(this.Dashboard);
@@ -243,15 +255,23 @@
             this.MainPanel.TabIndex = 3;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
-            // pictureBox1
+            // PackageTracking
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(200, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PackageTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.PackageTracking.FlatAppearance.BorderSize = 0;
+            this.PackageTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PackageTracking.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PackageTracking.ForeColor = System.Drawing.SystemColors.Control;
+            this.PackageTracking.Location = new System.Drawing.Point(0, 345);
+            this.PackageTracking.Margin = new System.Windows.Forms.Padding(0);
+            this.PackageTracking.Name = "PackageTracking";
+            this.PackageTracking.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.PackageTracking.Size = new System.Drawing.Size(200, 60);
+            this.PackageTracking.TabIndex = 9;
+            this.PackageTracking.Text = "Package Tracking";
+            this.PackageTracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PackageTracking.UseVisualStyleBackColor = false;
+            this.PackageTracking.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dashbord
             // 
@@ -266,9 +286,9 @@
             this.Text = "Dashbord";
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SideBar.ResumeLayout(false);
             this.VehicleMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +310,6 @@
         private System.Windows.Forms.Timer MenuTransision;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button PackageTracking;
     }
 }
