@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
 
 public class Dbcon
@@ -82,5 +81,31 @@ public class Dbcon
             return await command.ExecuteScalarAsync();
         }
     }
-}
 
+    // Method to add a new package to the Packagestracker table
+    public async Task<int> AddPackage(string currentLocation, string status, string destination, double weight, string sender, string recipient, DateTime creationDate, DateTime estimatedDeliveryDate)
+    {
+        string query = "INSERT INTO Packagestracker (CurrentLocation, Status, Destination, Weight, Sender, Recipient, CreationDate, EstimatedDeliveryDate) " +
+                       "VALUES (@CurrentLocation, @Status, @Destination, @Weight, @Sender, @Recipient, @CreationDate, @EstimatedDeliveryDate)";
+        var parameters = new Dictionary<string, object>
+        {
+            { "@CurrentLocation", currentLocation },
+            { "@Status", status },
+            { "@Destination", destination },
+            { "@Weight", weight },
+            { "@Sender", sender },
+            { "@Recipient", recipient },
+            { "@CreationDate", creationDate },
+            { "@EstimatedDeliveryDate", estimatedDeliveryDate }
+        };
+
+        return await ExecuteNonQuery(query, parameters);
+    }
+
+    // Method to get all packages from the Packagestracker table
+    public async Task<MySqlDataReader> GetAllPackages()
+    {
+        string query = "SELECT * FROM Packagestracker";
+        return await ExecuteQuery(query);
+    }
+}

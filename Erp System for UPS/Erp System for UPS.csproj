@@ -101,68 +101,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllVehicleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AllVehicleForm.Designer.cs">
-      <DependentUpon>AllVehicleForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dashbord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashbord.Designer.cs">
-      <DependentUpon>Dashbord.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dbcon.cs" />
-    <Compile Include="DriverInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DriverInfo.Designer.cs">
-      <DependentUpon>DriverInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Loginform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Loginform.Designer.cs">
       <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaintenanceAlertForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MaintenanceAlertForm.Designer.cs">
-      <DependentUpon>MaintenanceAlertForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageUserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageUserForm.Designer.cs">
-      <DependentUpon>ManageUserForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VehicleInfo.cs">
+    <Compile Include="TrackingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VehicleInfo.Designer.cs">
-      <DependentUpon>VehicleInfo.cs</DependentUpon>
+    <Compile Include="TrackingForm.Designer.cs">
+      <DependentUpon>TrackingForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AllVehicleForm.resx">
-      <DependentUpon>AllVehicleForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashbord.resx">
-      <DependentUpon>Dashbord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DriverInfo.resx">
-      <DependentUpon>DriverInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MaintenanceAlertForm.resx">
-      <DependentUpon>MaintenanceAlertForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageUserForm.resx">
-      <DependentUpon>ManageUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,9 +127,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="VehicleInfo.resx">
-      <DependentUpon>VehicleInfo.cs</DependentUpon>
+    <EmbeddedResource Include="TrackingForm.resx">
+      <DependentUpon>TrackingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -189,6 +145,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureBox1.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-close-x-logo-white-icon-73581169686041574qndouypm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-icon-close-button-png-image_1357822.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
