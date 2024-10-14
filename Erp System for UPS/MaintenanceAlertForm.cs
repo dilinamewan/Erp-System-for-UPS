@@ -74,8 +74,11 @@ namespace Erp_System_for_UPS
                 bool currentStatus = Convert.ToBoolean(dataGridViewAlerts.Rows[e.RowIndex].Cells["IsFixed"].Value);
                 bool newStatus = !currentStatus;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 // Prompt user for confirmation
+=======
+>>>>>>> Stashed changes
                 string message = newStatus ? "Mark this alert as Fixed?" : "Undo the Fixed status for this alert?";
                 DialogResult result = MessageBox.Show(message, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
