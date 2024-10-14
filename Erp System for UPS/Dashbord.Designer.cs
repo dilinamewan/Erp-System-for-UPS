@@ -34,7 +34,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.H1 = new System.Windows.Forms.Label();
             this.SideBar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.PackageTracking = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
             this.VehicleMenu = new System.Windows.Forms.FlowLayoutPanel();
@@ -60,10 +59,6 @@
             this.Header.Controls.Add(this.H1);
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
-<<<<<<< Updated upstream
-=======
-            this.Header.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(938, 44);
             this.Header.TabIndex = 0;
@@ -71,12 +66,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-<<<<<<< Updated upstream
             this.pictureBox1.Location = new System.Drawing.Point(200, 0);
-=======
-            this.pictureBox1.Location = new System.Drawing.Point(267, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(146, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,34 +96,11 @@
             this.SideBar.Controls.Add(this.Dashboard);
             this.SideBar.Controls.Add(this.ManageDrivers);
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
-<<<<<<< Updated upstream
             this.SideBar.Location = new System.Drawing.Point(0, 44);
-=======
-            this.SideBar.Location = new System.Drawing.Point(0, 54);
-            this.SideBar.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.SideBar.Name = "SideBar";
             this.SideBar.Size = new System.Drawing.Size(200, 506);
             this.SideBar.TabIndex = 1;
             this.SideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(-4, 310);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(267, 74);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Package Tracking";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // PackageTracking
             // 
@@ -161,12 +128,7 @@
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.SystemColors.Control;
-<<<<<<< Updated upstream
             this.LogOutButton.Location = new System.Drawing.Point(0, 446);
-=======
-            this.LogOutButton.Location = new System.Drawing.Point(0, 549);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.LogOutButton.Size = new System.Drawing.Size(200, 60);
@@ -184,12 +146,7 @@
             this.VehicleMenu.Controls.Add(this.AvailbleVehicles);
             this.VehicleMenu.Controls.Add(this.Alert);
             this.VehicleMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-<<<<<<< Updated upstream
             this.VehicleMenu.Location = new System.Drawing.Point(0, 132);
-=======
-            this.VehicleMenu.Location = new System.Drawing.Point(0, 162);
-            this.VehicleMenu.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.VehicleMenu.Name = "VehicleMenu";
             this.VehicleMenu.Size = new System.Drawing.Size(200, 60);
             this.VehicleMenu.TabIndex = 7;
@@ -275,10 +232,6 @@
             this.Dashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dashboard.ForeColor = System.Drawing.Color.White;
             this.Dashboard.Location = new System.Drawing.Point(0, 0);
-<<<<<<< Updated upstream
-=======
-            this.Dashboard.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.Dashboard.Name = "Dashboard";
             this.Dashboard.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.Dashboard.Size = new System.Drawing.Size(200, 60);
@@ -294,12 +247,7 @@
             this.ManageDrivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManageDrivers.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageDrivers.ForeColor = System.Drawing.SystemColors.Control;
-<<<<<<< Updated upstream
             this.ManageDrivers.Location = new System.Drawing.Point(0, 66);
-=======
-            this.ManageDrivers.Location = new System.Drawing.Point(0, 81);
-            this.ManageDrivers.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.ManageDrivers.Name = "ManageDrivers";
             this.ManageDrivers.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.ManageDrivers.Size = new System.Drawing.Size(200, 60);
@@ -319,12 +267,7 @@
             // 
             this.MainPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< Updated upstream
             this.MainPanel.Location = new System.Drawing.Point(200, 44);
-=======
-            this.MainPanel.Location = new System.Drawing.Point(267, 54);
-            this.MainPanel.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(738, 506);
             this.MainPanel.TabIndex = 3;
@@ -339,10 +282,6 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.SideBar);
             this.Controls.Add(this.Header);
-<<<<<<< Updated upstream
-=======
-            this.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.Name = "Dashbord";
             this.Text = "Dashbord";
             this.Header.ResumeLayout(false);
