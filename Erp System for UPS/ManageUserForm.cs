@@ -89,5 +89,10 @@ namespace Erp_System_for_UPS
         private void dataGridViewDrivers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
