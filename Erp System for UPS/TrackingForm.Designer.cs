@@ -57,7 +57,7 @@
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(119, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 15);
+            this.label1.Size = new System.Drawing.Size(180, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Package Tracking System";
             // 
@@ -76,8 +76,9 @@
             this.textBoxPackageID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxPackageID.Location = new System.Drawing.Point(39, 428);
             this.textBoxPackageID.Name = "textBoxPackageID";
-            this.textBoxPackageID.Size = new System.Drawing.Size(280, 24);
+            this.textBoxPackageID.Size = new System.Drawing.Size(280, 28);
             this.textBoxPackageID.TabIndex = 1;
+            this.textBoxPackageID.TextChanged += new System.EventHandler(this.textBoxPackageID_TextChanged_1);
             // 
             // labelPackageID
             // 
@@ -86,7 +87,7 @@
             this.labelPackageID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPackageID.Location = new System.Drawing.Point(36, 408);
             this.labelPackageID.Name = "labelPackageID";
-            this.labelPackageID.Size = new System.Drawing.Size(78, 17);
+            this.labelPackageID.Size = new System.Drawing.Size(100, 23);
             this.labelPackageID.TabIndex = 2;
             this.labelPackageID.Text = "Package ID:";
             this.labelPackageID.Click += new System.EventHandler(this.labelPackageID_Click);
@@ -112,12 +113,12 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Size = new System.Drawing.Size(0, 23);
             this.label2.TabIndex = 4;
             // 
             // TrackingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 564);
             this.Controls.Add(this.label2);

@@ -138,5 +138,10 @@ namespace Erp_System_for_UPS
         {
 
         }
+
+        private void textBoxPackageID_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
