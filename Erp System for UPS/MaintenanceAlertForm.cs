@@ -1,8 +1,16 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Data;
 using System.Drawing;
+=======
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+>>>>>>> main
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +33,7 @@ namespace Erp_System_for_UPS
             AddButtonColumn();
         }
 
+<<<<<<< HEAD
         private void AddButtonColumn()
         {
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
@@ -33,6 +42,15 @@ namespace Erp_System_for_UPS
                 Text = "Fixed",
                 UseColumnTextForButtonValue = true
             };
+=======
+        
+        private void AddButtonColumn()
+        {
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+            buttonColumn.HeaderText = "Actions";
+            buttonColumn.Text = "Fixed";
+            buttonColumn.UseColumnTextForButtonValue = true;
+>>>>>>> main
             dataGridViewAlerts.Columns.Add(buttonColumn);
             dataGridViewAlerts.CellClick += new DataGridViewCellEventHandler(dataGridViewAlerts_CellClick);
 
@@ -56,6 +74,7 @@ namespace Erp_System_for_UPS
                 bool currentStatus = Convert.ToBoolean(dataGridViewAlerts.Rows[e.RowIndex].Cells["IsFixed"].Value);
                 bool newStatus = !currentStatus;
 
+<<<<<<< HEAD
                 // Prompt user for confirmation
                 string message = newStatus ? "Mark this alert as Fixed?" : "Undo the Fixed status for this alert?";
                 DialogResult result = MessageBox.Show(message, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -70,6 +89,14 @@ namespace Erp_System_for_UPS
                         dataGridViewAlerts.Rows[e.RowIndex].DefaultCellStyle.BackColor = newStatus ? Color.LightGreen : Color.LightPink;
                         //dataGridViewAlerts.Rows[e.RowIndex].Cells["Actions"].Value = newStatus ? "Undo" : "Fixed"; // Toggle button text
                     }
+=======
+                // Update the database
+                if (await UpdateAlertStatus(alertId, newStatus))
+                {
+                    // Update the DataGridView
+                    dataGridViewAlerts.Rows[e.RowIndex].Cells["IsFixed"].Value = newStatus;
+                    dataGridViewAlerts.Rows[e.RowIndex].DefaultCellStyle.BackColor = newStatus ? Color.LightGreen : Color.LightPink;
+>>>>>>> main
                 }
             
         }
@@ -82,10 +109,17 @@ namespace Erp_System_for_UPS
 
                 string query = "UPDATE maintenancealerts SET IsFixed = @IsFixed WHERE AlertID = @AlertID";
                 Dictionary<string, object> parameters = new Dictionary<string, object>
+<<<<<<< HEAD
                 {
                     { "@IsFixed", isFixed },
                     { "@AlertID", alertId }
                 };
+=======
+        {
+            { "@IsFixed", isFixed },
+            { "@AlertID", alertId }
+        };
+>>>>>>> main
 
                 int rowsAffected = await db.ExecuteNonQuery(query, parameters);
 
@@ -101,7 +135,10 @@ namespace Erp_System_for_UPS
                 db.Disconnect();
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
         private async Task LoadMaintenanceAlerts()
         {
             try
@@ -109,6 +146,7 @@ namespace Erp_System_for_UPS
                 await db.Connect();
 
                 string query = @"
+<<<<<<< HEAD
                     SELECT 
                         ma.AlertID,
                         v.VehicleID,
@@ -126,6 +164,25 @@ namespace Erp_System_for_UPS
                         vehicles v ON ma.VehicleID = v.VehicleID
                     ORDER BY 
                         ma.DateGenerated DESC";
+=======
+        SELECT 
+            ma.AlertID,
+            v.VehicleID,
+            v.Make,
+            v.Model,
+            v.Year,
+            v.LicensePlate,
+            ma.AlertType,
+            ma.OdometerAtAlert,
+            ma.DateGenerated,
+            ma.IsFixed
+        FROM 
+            maintenancealerts ma
+        JOIN
+            vehicles v ON ma.VehicleID = v.VehicleID
+        ORDER BY 
+            ma.DateGenerated DESC";
+>>>>>>> main
 
                 MySqlDataReader reader = await db.ExecuteQuery(query);
 
@@ -160,6 +217,10 @@ namespace Erp_System_for_UPS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         }
     }
 }
