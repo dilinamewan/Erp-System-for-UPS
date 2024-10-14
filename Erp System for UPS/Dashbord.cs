@@ -126,5 +126,10 @@ namespace Erp_System_for_UPS
             TrackingForm trackingForm = new TrackingForm();
             trackingForm.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
