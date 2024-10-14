@@ -34,6 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.H1 = new System.Windows.Forms.Label();
             this.SideBar = new System.Windows.Forms.Panel();
+            this.PackageTracking = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
             this.VehicleMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.ManageVehicles = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.MenuTransision = new System.Windows.Forms.Timer(this.components);
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.PackageTracking = new System.Windows.Forms.Button();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SideBar.SuspendLayout();
@@ -102,6 +102,24 @@
             this.SideBar.TabIndex = 1;
             this.SideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // PackageTracking
+            // 
+            this.PackageTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.PackageTracking.FlatAppearance.BorderSize = 0;
+            this.PackageTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PackageTracking.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PackageTracking.ForeColor = System.Drawing.SystemColors.Control;
+            this.PackageTracking.Location = new System.Drawing.Point(0, 192);
+            this.PackageTracking.Margin = new System.Windows.Forms.Padding(0);
+            this.PackageTracking.Name = "PackageTracking";
+            this.PackageTracking.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.PackageTracking.Size = new System.Drawing.Size(200, 60);
+            this.PackageTracking.TabIndex = 9;
+            this.PackageTracking.Text = "Package Tracking";
+            this.PackageTracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PackageTracking.UseVisualStyleBackColor = false;
+            this.PackageTracking.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LogOutButton
             // 
             this.LogOutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -130,7 +148,7 @@
             this.VehicleMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.VehicleMenu.Location = new System.Drawing.Point(0, 132);
             this.VehicleMenu.Name = "VehicleMenu";
-            this.VehicleMenu.Size = new System.Drawing.Size(200, 210);
+            this.VehicleMenu.Size = new System.Drawing.Size(200, 60);
             this.VehicleMenu.TabIndex = 7;
             this.VehicleMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.VehicleMenu_Paint);
             // 
@@ -159,7 +177,7 @@
             this.AllVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AllVehicles.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AllVehicles.ForeColor = System.Drawing.SystemColors.Control;
-            this.AllVehicles.Location = new System.Drawing.Point(0, 60);
+            this.AllVehicles.Location = new System.Drawing.Point(200, 0);
             this.AllVehicles.Margin = new System.Windows.Forms.Padding(0);
             this.AllVehicles.Name = "AllVehicles";
             this.AllVehicles.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -177,7 +195,7 @@
             this.AvailbleVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AvailbleVehicles.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvailbleVehicles.ForeColor = System.Drawing.SystemColors.Control;
-            this.AvailbleVehicles.Location = new System.Drawing.Point(0, 103);
+            this.AvailbleVehicles.Location = new System.Drawing.Point(400, 0);
             this.AvailbleVehicles.Margin = new System.Windows.Forms.Padding(0);
             this.AvailbleVehicles.Name = "AvailbleVehicles";
             this.AvailbleVehicles.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -194,7 +212,7 @@
             this.Alert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Alert.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Alert.ForeColor = System.Drawing.SystemColors.Control;
-            this.Alert.Location = new System.Drawing.Point(0, 146);
+            this.Alert.Location = new System.Drawing.Point(600, 0);
             this.Alert.Margin = new System.Windows.Forms.Padding(0);
             this.Alert.Name = "Alert";
             this.Alert.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -254,24 +272,6 @@
             this.MainPanel.Size = new System.Drawing.Size(738, 506);
             this.MainPanel.TabIndex = 3;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
-            // 
-            // PackageTracking
-            // 
-            this.PackageTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
-            this.PackageTracking.FlatAppearance.BorderSize = 0;
-            this.PackageTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PackageTracking.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PackageTracking.ForeColor = System.Drawing.SystemColors.Control;
-            this.PackageTracking.Location = new System.Drawing.Point(0, 345);
-            this.PackageTracking.Margin = new System.Windows.Forms.Padding(0);
-            this.PackageTracking.Name = "PackageTracking";
-            this.PackageTracking.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.PackageTracking.Size = new System.Drawing.Size(200, 60);
-            this.PackageTracking.TabIndex = 9;
-            this.PackageTracking.Text = "Package Tracking";
-            this.PackageTracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PackageTracking.UseVisualStyleBackColor = false;
-            this.PackageTracking.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dashbord
             // 
