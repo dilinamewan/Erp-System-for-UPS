@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace Erp_System_for_UPS
 {
     public partial class Dashbord : Form
@@ -18,7 +16,7 @@ namespace Erp_System_for_UPS
         public Dashbord()
         {
             InitializeComponent();
-            
+            LoadForm(new DashbordElements());
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -86,14 +84,14 @@ namespace Erp_System_for_UPS
             DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                
+
                 MessageBox.Show("Logged out successfully!", "Log Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
+
                 Form1 loginForm = new Form1();
                 loginForm.Show();
 
-                
+
                 this.Close();
             }
         }
