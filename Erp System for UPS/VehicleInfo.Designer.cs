@@ -37,7 +37,7 @@
             // 
             // Header2
             // 
-            this.Header2.BackColor = System.Drawing.Color.White;
+            this.Header2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.Header2.Controls.Add(this.VehicleVIN);
             this.Header2.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header2.Location = new System.Drawing.Point(0, 0);
@@ -49,6 +49,7 @@
             // 
             this.VehicleVIN.AutoSize = true;
             this.VehicleVIN.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VehicleVIN.ForeColor = System.Drawing.Color.White;
             this.VehicleVIN.Location = new System.Drawing.Point(21, 3);
             this.VehicleVIN.Name = "VehicleVIN";
             this.VehicleVIN.Size = new System.Drawing.Size(75, 17);
@@ -63,6 +64,7 @@
             this.dataGridViewVehicle.Name = "dataGridViewVehicle";
             this.dataGridViewVehicle.Size = new System.Drawing.Size(800, 424);
             this.dataGridViewVehicle.TabIndex = 6;
+            this.dataGridViewVehicle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVehicle_CellContentClick);
             // 
             // VehicleInfo
             // 

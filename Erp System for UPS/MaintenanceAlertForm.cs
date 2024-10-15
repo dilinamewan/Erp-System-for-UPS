@@ -36,7 +36,7 @@ namespace Erp_System_for_UPS
             dataGridViewAlerts.Columns.Add(buttonColumn);
             dataGridViewAlerts.CellClick += new DataGridViewCellEventHandler(dataGridViewAlerts_CellClick);
 
-            // Set initial row colors
+           
             SetInitialRowColors();
         }
 
@@ -56,19 +56,19 @@ namespace Erp_System_for_UPS
                 bool currentStatus = Convert.ToBoolean(dataGridViewAlerts.Rows[e.RowIndex].Cells["IsFixed"].Value);
                 bool newStatus = !currentStatus;
 
-                // Prompt user for confirmation
+                
                 string message = newStatus ? "Mark this alert as Fixed?" : "Undo the Fixed status for this alert?";
                 DialogResult result = MessageBox.Show(message, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    // Update the database
+           
                     if (await UpdateAlertStatus(alertId, newStatus))
                     {
-                        // Update the DataGridView
+                        
                         dataGridViewAlerts.Rows[e.RowIndex].Cells["IsFixed"].Value = newStatus;
                         dataGridViewAlerts.Rows[e.RowIndex].DefaultCellStyle.BackColor = newStatus ? Color.LightGreen : Color.LightPink;
-                        //dataGridViewAlerts.Rows[e.RowIndex].Cells["Actions"].Value = newStatus ? "Undo" : "Fixed"; // Toggle button text
+                       
                     }
                 }
             
@@ -141,7 +141,7 @@ namespace Erp_System_for_UPS
 
                 reader.Close();
 
-                // Set initial row colors after loading data
+                
                 SetInitialRowColors();
             }
             catch (MySqlException ex)
@@ -160,6 +160,11 @@ namespace Erp_System_for_UPS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            MaintenanceAlertForm.ActiveForm.Close();
         }
     }
 }

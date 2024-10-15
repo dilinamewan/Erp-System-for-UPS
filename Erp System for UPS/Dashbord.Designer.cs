@@ -39,7 +39,6 @@
             this.VehicleMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.ManageVehicles = new System.Windows.Forms.Button();
             this.AllVehicles = new System.Windows.Forms.Button();
-            this.AvailbleVehicles = new System.Windows.Forms.Button();
             this.Alert = new System.Windows.Forms.Button();
             this.Dashboard = new System.Windows.Forms.Button();
             this.ManageDrivers = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(200, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -72,9 +72,11 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // H1
             // 
+            this.H1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.H1.AutoSize = true;
             this.H1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.H1.ForeColor = System.Drawing.Color.White;
@@ -89,7 +91,7 @@
             // 
             // SideBar
             // 
-            this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.SideBar.Controls.Add(this.PackageTracking);
             this.SideBar.Controls.Add(this.LogOutButton);
             this.SideBar.Controls.Add(this.VehicleMenu);
@@ -104,7 +106,7 @@
             // 
             // PackageTracking
             // 
-            this.PackageTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.PackageTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.PackageTracking.FlatAppearance.BorderSize = 0;
             this.PackageTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PackageTracking.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,7 +125,7 @@
             // LogOutButton
             // 
             this.LogOutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.LogOutButton.FlatAppearance.BorderSize = 0;
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,10 +142,9 @@
             // 
             // VehicleMenu
             // 
-            this.VehicleMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(112)))), ((int)(((byte)(64)))));
+            this.VehicleMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
             this.VehicleMenu.Controls.Add(this.ManageVehicles);
             this.VehicleMenu.Controls.Add(this.AllVehicles);
-            this.VehicleMenu.Controls.Add(this.AvailbleVehicles);
             this.VehicleMenu.Controls.Add(this.Alert);
             this.VehicleMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.VehicleMenu.Location = new System.Drawing.Point(0, 132);
@@ -154,7 +155,7 @@
             // 
             // ManageVehicles
             // 
-            this.ManageVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.ManageVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.ManageVehicles.FlatAppearance.BorderSize = 0;
             this.ManageVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManageVehicles.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,7 +173,7 @@
             // 
             // AllVehicles
             // 
-            this.AllVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(112)))), ((int)(((byte)(64)))));
+            this.AllVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
             this.AllVehicles.FlatAppearance.BorderSize = 0;
             this.AllVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AllVehicles.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,31 +189,14 @@
             this.AllVehicles.UseVisualStyleBackColor = false;
             this.AllVehicles.Click += new System.EventHandler(this.AllVehicles_Click);
             // 
-            // AvailbleVehicles
-            // 
-            this.AvailbleVehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(112)))), ((int)(((byte)(64)))));
-            this.AvailbleVehicles.FlatAppearance.BorderSize = 0;
-            this.AvailbleVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AvailbleVehicles.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvailbleVehicles.ForeColor = System.Drawing.SystemColors.Control;
-            this.AvailbleVehicles.Location = new System.Drawing.Point(400, 0);
-            this.AvailbleVehicles.Margin = new System.Windows.Forms.Padding(0);
-            this.AvailbleVehicles.Name = "AvailbleVehicles";
-            this.AvailbleVehicles.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.AvailbleVehicles.Size = new System.Drawing.Size(200, 43);
-            this.AvailbleVehicles.TabIndex = 8;
-            this.AvailbleVehicles.Text = "Availble Vehicles";
-            this.AvailbleVehicles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AvailbleVehicles.UseVisualStyleBackColor = false;
-            // 
             // Alert
             // 
-            this.Alert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(112)))), ((int)(((byte)(64)))));
+            this.Alert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
             this.Alert.FlatAppearance.BorderSize = 0;
             this.Alert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Alert.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Alert.ForeColor = System.Drawing.SystemColors.Control;
-            this.Alert.Location = new System.Drawing.Point(600, 0);
+            this.Alert.Location = new System.Drawing.Point(400, 0);
             this.Alert.Margin = new System.Windows.Forms.Padding(0);
             this.Alert.Name = "Alert";
             this.Alert.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -225,7 +209,7 @@
             // 
             // Dashboard
             // 
-            this.Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.Dashboard.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
             this.Dashboard.FlatAppearance.BorderSize = 0;
             this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -239,10 +223,11 @@
             this.Dashboard.Text = "Dashboard";
             this.Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Dashboard.UseVisualStyleBackColor = false;
+            this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
             // 
             // ManageDrivers
             // 
-            this.ManageDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
+            this.ManageDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.ManageDrivers.FlatAppearance.BorderSize = 0;
             this.ManageDrivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManageDrivers.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -304,12 +289,11 @@
         private System.Windows.Forms.Button ManageVehicles;
         private System.Windows.Forms.FlowLayoutPanel VehicleMenu;
         private System.Windows.Forms.Button AllVehicles;
-        private System.Windows.Forms.Button AvailbleVehicles;
         private System.Windows.Forms.Button Alert;
         private System.Windows.Forms.Button LogOutButton;
         private System.Windows.Forms.Timer MenuTransision;
-        private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button PackageTracking;
+        private System.Windows.Forms.Panel MainPanel;
     }
 }

@@ -107,5 +107,10 @@ namespace Erp_System_for_UPS
         {
 
         }
+
+        private void dataGridViewDriver_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

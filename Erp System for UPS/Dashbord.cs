@@ -16,6 +16,7 @@ namespace Erp_System_for_UPS
         public Dashbord()
         {
             InitializeComponent();
+            LoadForm(new DashbordElements());
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -49,7 +50,7 @@ namespace Erp_System_for_UPS
             {
                 PackageTracking.Location = new Point(PackageTracking.Location.X, PackageTracking.Location.Y + 10);
                 VehicleMenu.Height += 10;
-                if (VehicleMenu.Height >= 210)
+                if (VehicleMenu.Height >= 160)
                 {
                     MenuTransision.Stop();
                     MenueExpand = false;
@@ -83,14 +84,14 @@ namespace Erp_System_for_UPS
             DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                // Show a message indicating successful logout
+                
                 MessageBox.Show("Logged out successfully!", "Log Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Open the login form
+                
                 Form1 loginForm = new Form1();
                 loginForm.Show();
 
-                // Close the current form (main dashboard or the form where logout is being triggered)
+                
                 this.Close();
             }
         }
@@ -125,6 +126,16 @@ namespace Erp_System_for_UPS
         {
             TrackingForm trackingForm = new TrackingForm();
             trackingForm.Show();
+        }
+
+        private void Dashboard_Click(object sender, EventArgs e)
+        {
+            LoadForm(new DashbordElements());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

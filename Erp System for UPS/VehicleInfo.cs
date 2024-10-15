@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -114,6 +115,8 @@ namespace Erp_System_for_UPS
                 DataTable vehicleTable = new DataTable();
                 vehicleTable.Load(reader);
                 dataGridViewVehicle.DataSource = vehicleTable;
+                
+                
 
                 reader.Close();
             }
@@ -138,6 +141,11 @@ namespace Erp_System_for_UPS
 
         private void VehicleName_Click(object sender, EventArgs e)
         {
+        }
+
+        private void dataGridViewVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

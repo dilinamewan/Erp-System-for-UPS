@@ -1,4 +1,7 @@
-﻿namespace Erp_System_for_UPS
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Erp_System_for_UPS
 {
     partial class DriverInfo
     {
@@ -28,6 +31,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Header2 = new System.Windows.Forms.Panel();
             this.DriverName = new System.Windows.Forms.Label();
             this.dataGridViewDriver = new System.Windows.Forms.DataGridView();
@@ -58,12 +63,38 @@
             // 
             // dataGridViewDriver
             // 
+            this.dataGridViewDriver.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewDriver.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewDriver.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(112)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDriver.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewDriver.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDriver.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewDriver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewDriver.EnableHeadersVisualStyles = false;
+            this.dataGridViewDriver.GridColor = System.Drawing.Color.LightGray;
             this.dataGridViewDriver.Location = new System.Drawing.Point(0, 26);
             this.dataGridViewDriver.Name = "dataGridViewDriver";
+            this.dataGridViewDriver.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5);
+            this.dataGridViewDriver.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightBlue;
+            this.dataGridViewDriver.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewDriver.RowTemplate.Height = 40;
             this.dataGridViewDriver.Size = new System.Drawing.Size(800, 424);
             this.dataGridViewDriver.TabIndex = 5;
+            this.dataGridViewDriver.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDriver_CellContentClick);
             // 
             // DriverInfo
             // 
