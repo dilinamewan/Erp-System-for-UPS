@@ -14,7 +14,6 @@ namespace Erp_System_for_UPS
         private readonly Dbcon db;
         private Chart costChart;
         private DashboardDataFetcher dataFetcher;
-        private SplitContainer splitContainer;
 
         public DashbordElements()
         {
