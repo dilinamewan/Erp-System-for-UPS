@@ -134,5 +134,10 @@ namespace Erp_System_for_UPS
         {
 
         }
+
+        private void Header_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

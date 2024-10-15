@@ -59,16 +59,17 @@
             this.Header.Controls.Add(this.H1);
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
-            this.Header.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Header.Margin = new System.Windows.Forms.Padding(4);
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(1251, 54);
             this.Header.TabIndex = 0;
+            this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(267, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,7 +101,7 @@
             this.SideBar.Controls.Add(this.ManageDrivers);
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.Location = new System.Drawing.Point(0, 54);
-            this.SideBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SideBar.Margin = new System.Windows.Forms.Padding(4);
             this.SideBar.Name = "SideBar";
             this.SideBar.Size = new System.Drawing.Size(267, 623);
             this.SideBar.TabIndex = 1;
@@ -133,7 +134,7 @@
             this.LogOutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.SystemColors.Control;
             this.LogOutButton.Location = new System.Drawing.Point(0, 549);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(4);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.LogOutButton.Size = new System.Drawing.Size(267, 74);
@@ -152,7 +153,7 @@
             this.VehicleMenu.Controls.Add(this.Alert);
             this.VehicleMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.VehicleMenu.Location = new System.Drawing.Point(0, 162);
-            this.VehicleMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VehicleMenu.Margin = new System.Windows.Forms.Padding(4);
             this.VehicleMenu.Name = "VehicleMenu";
             this.VehicleMenu.Size = new System.Drawing.Size(267, 74);
             this.VehicleMenu.TabIndex = 7;
@@ -238,7 +239,7 @@
             this.Dashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dashboard.ForeColor = System.Drawing.Color.White;
             this.Dashboard.Location = new System.Drawing.Point(0, 0);
-            this.Dashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dashboard.Margin = new System.Windows.Forms.Padding(4);
             this.Dashboard.Name = "Dashboard";
             this.Dashboard.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.Dashboard.Size = new System.Drawing.Size(267, 74);
@@ -255,7 +256,7 @@
             this.ManageDrivers.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageDrivers.ForeColor = System.Drawing.SystemColors.Control;
             this.ManageDrivers.Location = new System.Drawing.Point(0, 81);
-            this.ManageDrivers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ManageDrivers.Margin = new System.Windows.Forms.Padding(4);
             this.ManageDrivers.Name = "ManageDrivers";
             this.ManageDrivers.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.ManageDrivers.Size = new System.Drawing.Size(267, 74);
@@ -276,7 +277,7 @@
             this.MainPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(267, 54);
-            this.MainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(4);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(984, 623);
             this.MainPanel.TabIndex = 3;
@@ -291,7 +292,7 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.SideBar);
             this.Controls.Add(this.Header);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashbord";
             this.Text = "Dashbord";
             this.Load += new System.EventHandler(this.Dashbord_Load);
