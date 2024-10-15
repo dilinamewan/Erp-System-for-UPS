@@ -21,22 +21,10 @@ namespace Erp_System_for_UPS
             db = new Dbcon();
             dataFetcher = new DashboardDataFetcher(db);
             InitializeComponent();
-            InitializeSplitContainer();
             InitializeCostChart();
             LoadDashboardData();
         }
-
         
-        private void InitializeSplitContainer()
-        {
-            splitContainer = new SplitContainer();
-            splitContainer.Dock = DockStyle.Fill;
-            splitContainer.Orientation = Orientation.Horizontal; 
-            
-
-            this.Controls.Add(splitContainer);
-        }
-
         private void InitializeCostChart()
         {
             costChart = new Chart();
@@ -47,6 +35,7 @@ namespace Erp_System_for_UPS
 
             costChart.Titles.Add("Cost Analysis");
             costChart.Titles[0].Font = new Font("Arial", 16, FontStyle.Bold);
+            
 
             Legend legend = new Legend();
             costChart.Legends.Add(legend);
@@ -67,16 +56,17 @@ namespace Erp_System_for_UPS
             costChart.Series.Add(futureMaintSeries);
 
            
+
             chartArea.AxisX.Title = "Months";
             chartArea.AxisX.Interval = 1; 
             chartArea.AxisX.LabelStyle.Format = "MMM"; 
 
             
             chartArea.AxisY.Title = "Cost";
-            chartArea.AxisY.Interval = 10000;  
+            chartArea.AxisY.Interval = 10000;
 
-         
-            splitContainer.Panel2.Controls.Add(costChart);
+
+            panel4.Controls.Add(costChart);
         }
 
 
@@ -231,5 +221,10 @@ LIMIT 12;
         private void ActiveDriverCount_Click(object sender, EventArgs e) { }
         private void AssignedDriverCount_Click(object sender, EventArgs e) { }
         private void pictureBox3_Click(object sender, EventArgs e) { }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
