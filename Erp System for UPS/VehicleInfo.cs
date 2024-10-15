@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.WinForms;
@@ -121,6 +122,8 @@ namespace Erp_System_for_UPS
                 DataTable vehicleTable = new DataTable();
                 vehicleTable.Load(reader);
                 dataGridViewVehicle.DataSource = vehicleTable;
+                
+                
 
                 if (vehicleTable.Rows.Count > 0)
                 {
@@ -187,6 +190,11 @@ namespace Erp_System_for_UPS
         private void VehicleName_Click(object sender, EventArgs e)
         {
             // Event handler if needed
+        }
+
+        private void dataGridViewVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void dataGridViewVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)

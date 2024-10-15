@@ -37,7 +37,7 @@
             // 
             // Header2
             // 
-            this.Header2.BackColor = System.Drawing.Color.White;
+            this.Header2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(42)))));
             this.Header2.Controls.Add(this.VehicleVIN);
             this.Header2.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header2.Location = new System.Drawing.Point(0, 0);
@@ -50,8 +50,8 @@
             // 
             this.VehicleVIN.AutoSize = true;
             this.VehicleVIN.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VehicleVIN.Location = new System.Drawing.Point(28, 4);
-            this.VehicleVIN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VehicleVIN.ForeColor = System.Drawing.Color.White;
+            this.VehicleVIN.Location = new System.Drawing.Point(21, 3);
             this.VehicleVIN.Name = "VehicleVIN";
             this.VehicleVIN.Size = new System.Drawing.Size(98, 23);
             this.VehicleVIN.TabIndex = 0;

@@ -82,5 +82,10 @@ public class Dbcon
             return await command.ExecuteScalarAsync();
         }
     }
+
+    internal MySqlConnection GetConnection()
+    {
+        throw new NotImplementedException();
+    }
 }
 
