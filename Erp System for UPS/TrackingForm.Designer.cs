@@ -59,7 +59,7 @@ namespace Erp_System_for_UPS
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(212, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 15);
+            this.label1.Size = new System.Drawing.Size(180, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Package Tracking System";
             // 
@@ -78,7 +78,7 @@ namespace Erp_System_for_UPS
             this.textBoxPackageID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxPackageID.Location = new System.Drawing.Point(147, 130);
             this.textBoxPackageID.Name = "textBoxPackageID";
-            this.textBoxPackageID.Size = new System.Drawing.Size(280, 24);
+            this.textBoxPackageID.Size = new System.Drawing.Size(280, 28);
             this.textBoxPackageID.TabIndex = 1;
             this.textBoxPackageID.TextChanged += new System.EventHandler(this.textBoxPackageID_TextChanged_1);
             // 
@@ -89,7 +89,7 @@ namespace Erp_System_for_UPS
             this.labelPackageID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPackageID.Location = new System.Drawing.Point(144, 110);
             this.labelPackageID.Name = "labelPackageID";
-            this.labelPackageID.Size = new System.Drawing.Size(78, 17);
+            this.labelPackageID.Size = new System.Drawing.Size(100, 23);
             this.labelPackageID.TabIndex = 2;
             this.labelPackageID.Text = "Package ID:";
             this.labelPackageID.Click += new System.EventHandler(this.labelPackageID_Click);
@@ -119,15 +119,14 @@ namespace Erp_System_for_UPS
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(46, 268);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(20);
-            this.label2.Size = new System.Drawing.Size(487, 197);
+            this.label2.Size = new System.Drawing.Size(0, 23);
             this.label2.TabIndex = 4;
             this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TrackingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(593, 504);

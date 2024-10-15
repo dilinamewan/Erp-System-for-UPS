@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System;
 
@@ -121,11 +121,6 @@ namespace Erp_System_for_UPS
         }
 
         private void labelPackageID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }
