@@ -14,7 +14,6 @@ namespace Erp_System_for_UPS
         public int vehicleId;
         public string vehicleName;
 
-        // Create a WebView2 control
         private WebView2 webViewMap;
 
         public VehicleInfo(int vehicleId, string vehicleName)
@@ -26,7 +25,6 @@ namespace Erp_System_for_UPS
             this.vehicleName = vehicleName;
             VehicleVIN.Text = vehicleName;
 
-            // Initialize WebView2
             InitializeWebView2();
         }
 
@@ -124,11 +122,9 @@ namespace Erp_System_for_UPS
 
                 if (vehicleTable.Rows.Count > 0)
                 {
-                    // Extract latitude and longitude values
                     if (double.TryParse(vehicleTable.Rows[0]["Latitude"].ToString(), out double latitude) &&
                         double.TryParse(vehicleTable.Rows[0]["Longitude"].ToString(), out double longitude))
                     {
-                        // Load Google Maps with the latitude and longitude
                         LoadGoogleMap(latitude, longitude);
                     }
                     else
@@ -155,41 +151,41 @@ namespace Erp_System_for_UPS
 
         private void LoadGoogleMap(double latitude, double longitude)
         {
-            // Construct the Google Maps URL
-            string url = $"https://www.google.com/maps/@{latitude},{longitude},15z";
+            string url = $"https://www.openstreetmap.org/?mlat={latitude}&mlon={longitude}#map=13/{latitude}/{longitude}";
 
-            // Load the URL in the WebView2 control
             webViewMap.Source = new Uri(url);
         }
 
         private async void InitializeWebView2()
         {
-            // Create and initialize WebView2 control
             webViewMap = new WebView2
             {
-                Dock = DockStyle.Bottom, // Dock at the bottom
-                Height = 350,
-                Width = 200// Set a fixed height for the map
+                Dock = DockStyle.Fill
+                
             };
 
-            // Add WebView2 to the form
-            this.Controls.Add(webViewMap);
+            
+            panel1.Controls.Add(webViewMap);
 
-            // Ensure the WebView2 is properly initialized
             await webViewMap.EnsureCoreWebView2Async(null);
         }
 
         private void VehicleInfo_Load(object sender, EventArgs e)
         {
-            // You can add any additional load logic here
+            
         }
 
         private void VehicleName_Click(object sender, EventArgs e)
         {
-            // Event handler if needed
+            
         }
 
         private void dataGridViewVehicle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
