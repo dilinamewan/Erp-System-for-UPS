@@ -1,4 +1,6 @@
-﻿namespace Erp_System_for_UPS
+﻿using System.Windows.Forms;
+
+namespace Erp_System_for_UPS
 {
     partial class TrackingForm
     {
@@ -47,7 +49,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 79);
+            this.panel1.Size = new System.Drawing.Size(593, 79);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -55,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(119, 28);
+            this.label1.Location = new System.Drawing.Point(212, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 15);
             this.label1.TabIndex = 8;
@@ -73,18 +75,19 @@
             // 
             // textBoxPackageID
             // 
-            this.textBoxPackageID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxPackageID.Location = new System.Drawing.Point(39, 428);
+            this.textBoxPackageID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxPackageID.Location = new System.Drawing.Point(147, 130);
             this.textBoxPackageID.Name = "textBoxPackageID";
             this.textBoxPackageID.Size = new System.Drawing.Size(280, 24);
             this.textBoxPackageID.TabIndex = 1;
+            this.textBoxPackageID.TextChanged += new System.EventHandler(this.textBoxPackageID_TextChanged_1);
             // 
             // labelPackageID
             // 
-            this.labelPackageID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPackageID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPackageID.AutoSize = true;
             this.labelPackageID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPackageID.Location = new System.Drawing.Point(36, 408);
+            this.labelPackageID.Location = new System.Drawing.Point(144, 110);
             this.labelPackageID.Name = "labelPackageID";
             this.labelPackageID.Size = new System.Drawing.Size(78, 17);
             this.labelPackageID.TabIndex = 2;
@@ -96,9 +99,10 @@
             this.btnTrack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTrack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnTrack.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnTrack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTrack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTrack.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnTrack.Location = new System.Drawing.Point(39, 500);
+            this.btnTrack.Location = new System.Drawing.Point(147, 188);
             this.btnTrack.Name = "btnTrack";
             this.btnTrack.Size = new System.Drawing.Size(280, 33);
             this.btnTrack.TabIndex = 3;
@@ -108,23 +112,30 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 126);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.BackColor = System.Drawing.SystemColors.Info;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Segoe UI ", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(46, 268);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Padding = new System.Windows.Forms.Padding(20);
+            this.label2.Size = new System.Drawing.Size(487, 197);
             this.label2.TabIndex = 4;
+            this.label2.Visible = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TrackingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 564);
-            this.Controls.Add(this.label2);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(593, 504);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTrack);
             this.Controls.Add(this.labelPackageID);
             this.Controls.Add(this.textBoxPackageID);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TrackingForm";

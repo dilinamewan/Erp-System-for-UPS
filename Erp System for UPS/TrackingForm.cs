@@ -1,4 +1,8 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
+using System;
+
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -35,13 +39,11 @@ namespace Erp_System_for_UPS
         {
             string packageId = textBoxPackageID.Text.Trim();
 
-
             if (string.IsNullOrEmpty(packageId))
             {
                 MessageBox.Show("Please enter a valid Package ID.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
 
             try
             {
@@ -51,28 +53,32 @@ namespace Erp_System_for_UPS
                                "FROM Packagestracker WHERE PackageID = @PackageID";
 
                 var parameters = new Dictionary<string, object>
-                {
-                    { "@PackageID", packageId }
-                };
+        {
+            { "@PackageID", packageId }
+        };
 
                 using (var reader = await _dbcon.ExecuteQuery(query, parameters))
                 {
                     if (await reader.ReadAsync())
                     {
+                        
+                        label2.Text = string.Empty;
+                        string packageDetails =
+                            $"{"Current Location:",-24}          {reader["CurrentLocation"]}\n" +
+                            $"{"Status:",-25}                {reader["Status"]}\n" +
+                            $"{"Destination:",-25}             {reader["Destination"]}\n" +
+                            $"{"Weight (kg):",-25}            {Convert.ToDouble(reader["Weight"])}\n" +
+                            $"{"Sender:",-25}              {reader["Sender"]}\n" +
+                            $"{"Recipient:",-25}              {reader["Recipient"]}\n" +
+                            $"{"Creation Date:",-25}          {Convert.ToDateTime(reader["CreationDate"]).ToShortDateString()}\n" +
+                            $"{"Estimated Delivery Date:",-25}    {Convert.ToDateTime(reader["EstimatedDeliveryDate"]).ToShortDateString()}";
 
-                        panelPackageDetails.Controls.Clear();
 
 
-                        DisplayPackageDetail("Current Location", reader["CurrentLocation"].ToString());
-                        DisplayPackageDetail("Status", reader["Status"].ToString());
-                        DisplayPackageDetail("Destination", reader["Destination"].ToString());
-                        DisplayPackageDetail("Weight (kg)", Convert.ToDouble(reader["Weight"]).ToString());
-                        DisplayPackageDetail("Sender", reader["Sender"].ToString());
-                        DisplayPackageDetail("Recipient", reader["Recipient"].ToString());
-                        DisplayPackageDetail("Creation Date", Convert.ToDateTime(reader["CreationDate"]).ToShortDateString());
-                        DisplayPackageDetail("Estimated Delivery Date", Convert.ToDateTime(reader["EstimatedDeliveryDate"]).ToShortDateString());
+                        label2.Text = packageDetails;
 
-                        panelPackageDetails.Visible = true;
+                        
+                        label2.Visible = true;
                     }
                     else
                     {
@@ -92,28 +98,7 @@ namespace Erp_System_for_UPS
 
         private void DisplayPackageDetail(string label, string value)
         {
-            int currentHeight = panelPackageDetails.Controls.Count * 20;
-
-
-            var labelTitle = new Label
-            {
-                Text = $"{label}:",
-                Location = new System.Drawing.Point(10, currentHeight),
-                Size = new System.Drawing.Size(150, 15), // Reduced height
-                Font = new System.Drawing.Font("Arial", 8, System.Drawing.FontStyle.Bold)
-            };
-
-
-            var labelValue = new Label
-            {
-                Text = value,
-                Location = new System.Drawing.Point(160, currentHeight),
-                Size = new System.Drawing.Size(400, 15),
-                Font = new System.Drawing.Font("Arial", 8)
-            };
-
-            panelPackageDetails.Controls.Add(labelTitle);
-            panelPackageDetails.Controls.Add(labelValue);
+         
         }
 
 
@@ -135,6 +120,16 @@ namespace Erp_System_for_UPS
         }
 
         private void labelPackageID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPackageID_TextChanged_1(object sender, EventArgs e)
         {
 
         }
