@@ -18,7 +18,7 @@ public class Dbcon
    
     public async Task Connect()
     {
-        string connectionString = "Server=localhost;Port=3306;Database=ups;Uid=root;Pwd=;";
+        string connectionString = "Server=localhost;Port=3306;Database=ups;Uid=root;Pwd=root;";
         conn = new MySqlConnection(connectionString);
         await conn.OpenAsync();
     }
