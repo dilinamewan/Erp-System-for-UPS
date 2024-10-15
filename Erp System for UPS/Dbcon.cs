@@ -15,7 +15,7 @@ public class Dbcon
         conn = null;
     }
 
-   
+    // Connect to the database
     public async Task Connect()
     {
         string connectionString = "Server=localhost;Port=3306;Database=ups;Uid=root;Pwd=root;";
@@ -23,13 +23,13 @@ public class Dbcon
         await conn.OpenAsync();
     }
 
-  
+    // Disconnect the database
     public void Disconnect()
     {
         conn?.Close();
     }
 
-    
+    // Execute a SELECT query and return a data reader
     public async Task<MySqlDataReader> ExecuteQuery(string query, Dictionary<string, object> parameters = null)
     {
         MySqlCommand cmd = new MySqlCommand(query, conn);
