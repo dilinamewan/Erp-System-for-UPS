@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Erp_System_for_UPS
 {
     public partial class Dashbord : Form
@@ -16,7 +18,7 @@ namespace Erp_System_for_UPS
         public Dashbord()
         {
             InitializeComponent();
-            LoadForm(new DashbordElements());
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
