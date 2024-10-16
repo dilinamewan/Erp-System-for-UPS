@@ -76,12 +76,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(61, 25);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 18);
+            this.label3.Size = new System.Drawing.Size(184, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = "Operation Management System";
             // 
@@ -100,27 +100,29 @@
             this.textBoxname.Location = new System.Drawing.Point(13, 252);
             this.textBoxname.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxname.Name = "textBoxname";
-            this.textBoxname.Size = new System.Drawing.Size(280, 28);
+            this.textBoxname.Size = new System.Drawing.Size(280, 24);
             this.textBoxname.TabIndex = 1;
             this.textBoxname.TextChanged += new System.EventHandler(this.textBoxname_TextChanged);
             // 
             // txtname
             // 
             this.txtname.AutoSize = true;
+            this.txtname.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(9, 227);
             this.txtname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(106, 21);
+            this.txtname.Size = new System.Drawing.Size(85, 20);
             this.txtname.TabIndex = 2;
             this.txtname.Text = "User Name:";
             // 
             // txtpass
             // 
             this.txtpass.AutoSize = true;
+            this.txtpass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.Location = new System.Drawing.Point(9, 297);
             this.txtpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(93, 21);
+            this.txtpass.Size = new System.Drawing.Size(73, 20);
             this.txtpass.TabIndex = 4;
             this.txtpass.Text = "Password:";
             this.txtpass.Click += new System.EventHandler(this.label2_Click);
@@ -130,7 +132,7 @@
             this.textBoxpass.Location = new System.Drawing.Point(9, 322);
             this.textBoxpass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxpass.Name = "textBoxpass";
-            this.textBoxpass.Size = new System.Drawing.Size(280, 28);
+            this.textBoxpass.Size = new System.Drawing.Size(280, 24);
             this.textBoxpass.TabIndex = 3;
             this.textBoxpass.UseSystemPasswordChar = true;
             this.textBoxpass.TextChanged += new System.EventHandler(this.textBoxpass_TextChanged);
@@ -139,7 +141,7 @@
             // 
             this.btnlogin.BackColor = System.Drawing.Color.Goldenrod;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.Location = new System.Drawing.Point(13, 383);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(280, 33);
@@ -161,10 +163,10 @@
             // checkBoxpass
             // 
             this.checkBoxpass.AutoSize = true;
-            this.checkBoxpass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxpass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxpass.Location = new System.Drawing.Point(148, 441);
             this.checkBoxpass.Name = "checkBoxpass";
-            this.checkBoxpass.Size = new System.Drawing.Size(145, 24);
+            this.checkBoxpass.Size = new System.Drawing.Size(129, 24);
             this.checkBoxpass.TabIndex = 7;
             this.checkBoxpass.Text = "Show Password";
             this.checkBoxpass.UseVisualStyleBackColor = true;
@@ -173,19 +175,19 @@
             // lblclear
             // 
             this.lblclear.AutoSize = true;
-            this.lblclear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblclear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblclear.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblclear.Location = new System.Drawing.Point(59, 445);
             this.lblclear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblclear.Name = "lblclear";
-            this.lblclear.Size = new System.Drawing.Size(49, 18);
+            this.lblclear.Size = new System.Drawing.Size(43, 20);
             this.lblclear.TabIndex = 8;
             this.lblclear.Text = "Clear";
             this.lblclear.Click += new System.EventHandler(this.lblclear_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 550);
             this.Controls.Add(this.lblclear);

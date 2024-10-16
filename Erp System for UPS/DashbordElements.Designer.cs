@@ -52,6 +52,7 @@
             this.InactiveDriverCount = new System.Windows.Forms.Label();
             this.TotalDriverCount = new System.Windows.Forms.Label();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.Header2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -380,18 +381,29 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 26);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(926, 279);
+            this.metroPanel1.Size = new System.Drawing.Size(926, 303);
             this.metroPanel1.TabIndex = 6;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 329);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(926, 227);
+            this.panel4.TabIndex = 7;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
             // DashbordElements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 556);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.Header2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -440,5 +452,6 @@
         private System.Windows.Forms.Label InactiveDriverCount;
         private System.Windows.Forms.Label TotalDriverCount;
         private MetroFramework.Controls.MetroPanel metroPanel1;
+        private System.Windows.Forms.Panel panel4;
     }
 }
