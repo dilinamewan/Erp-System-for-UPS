@@ -74,7 +74,7 @@ namespace Erp_System_for_UPS
             if (await AuthenticateUser(username, password))
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Redirect to Dashboard
+               
                 Dashbord dashboard = new Dashbord();
                 dashboard.Show();
                 this.Hide();
@@ -85,7 +85,7 @@ namespace Erp_System_for_UPS
             }
         }
 
-        // Method to authenticate the user by checking the MySQL database
+        
         private async Task<bool> AuthenticateUser(string username, string password)
         {
             try
@@ -94,17 +94,17 @@ namespace Erp_System_for_UPS
 
                 string query = "SELECT COUNT(1) FROM users WHERE UserName = @UserName AND Password = @Password";
 
-                // Define parameters
+               
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
                     { "@UserName", username },
                     { "@Password", password }
                 };
 
-                // Execute the query using ExecuteScalar to get a single value (the count)
+                
                 object result = await db.ExecuteScalar(query, parameters);
 
-                // Convert the result to an integer and check if it's equal to 1
+               
                 if (result != null && Convert.ToInt32(result) == 1)
                 {
                     return true;
